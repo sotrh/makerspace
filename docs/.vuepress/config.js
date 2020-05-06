@@ -3,9 +3,10 @@ module.exports = {
     title: 'Makerspace',
     description: 'A resource/code reference for Makerspace Students',
     themeConfig: {
-        nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Android', link: '/android/' },
+        sidebar: [
+            { title: 'Home', path: '/' },
+            { title: 'Android', path: '/android/' },
+            { title: 'Git', path: '/git/' },
         ]
     }
 };
