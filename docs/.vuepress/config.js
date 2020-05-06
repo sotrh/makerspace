@@ -5,7 +5,13 @@ module.exports = {
     themeConfig: {
         sidebar: [
             { title: 'Home', path: '/' },
-            { title: 'Android', path: '/android/' },
+            { 
+                title: 'Android', 
+                path: '/android/', 
+                children: [
+                    '/android/weather/'
+                ],
+            },
             { title: 'Git', path: '/git/' },
         ]
     }

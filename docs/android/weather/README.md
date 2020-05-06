@@ -1,4 +1,8 @@
-# Getting a forecast
+# Weather App
+
+This page documents some of the tech used in the Weather App project.
+
+## Getting a forecast
 
 We'll be using [api.weather.gov](https://api.weather.gov) to get our forecast data. It's not the most while layed out API, but it's free. We'll be using 2 endpoints. The first will give us some data we need for the second.
 
