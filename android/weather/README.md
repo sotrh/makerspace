@@ -46,7 +46,7 @@ In Kotlin, we'd do something like this.
 
 ```kotlin
 interface HelloAPI {
-    @GET("/hello")
+    @GET("example.com/hello")
     fun getHelloAsync(): Deferred<Hello>
 }
 ```
@@ -55,4 +55,21 @@ The `Hello` object would defined as follows.
 
 ```kotlin
 data class Hello(val message: String)
+```
+
+Now lets say that our `/hello` endpoint has an optional url parameter. Something like `/hello/{name}`. We can use the `@Path` decorator on one a parameter of the `getHelloAysnc()` function.
+
+```kotlin
+interface HelloAPI {
+    @GET("example.com/hello/{name}")
+    fun getHelloAsync(@Path name: String): Deferred<Hello>
+}
+```
+
+Calling `getHelloAsync("Fred")` would yeild us something like the following.
+
+```json
+{
+    "message": "Hello, Fred!"
+}
 ```
