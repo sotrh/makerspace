@@ -127,6 +127,16 @@ If you want to push your current changes to the remote version of your current b
 git push -u origin <BRANCH_NAME>
 ```
 
+## git clone
+
+Git clone will copy a remote repository to a folder on your machine. For example to clone the Makerspace website code you'd run
+
+```bash
+git clone https://github.com/sotrh/makerspace.git
+```
+
+If you want to make changes to a repo you've 
+
 ## git checkout
 
 `git checkout` is primarily used to change what branch you're currently on. For example if we are on the `master` branch and we want to work on the `dev` branch, we can use

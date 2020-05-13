@@ -5,11 +5,19 @@ module.exports = {
     themeConfig: {
         sidebar: [
             { title: 'Home', path: '/' },
+            {
+                title: 'Kotlin',
+                path: '/kotlin/',
+                children: [
+                    '/kotlin/types/',
+                    '/kotlin/operators/'
+                ],
+            },
             { 
                 title: 'Android', 
                 path: '/android/', 
                 children: [
-                    '/android/weather/'
+                    '/android/weather/',
                 ],
             },
             { title: 'Git', path: '/git/' },

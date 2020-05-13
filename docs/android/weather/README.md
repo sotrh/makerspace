@@ -1,6 +1,6 @@
 # Weather App
 
-This page documents some of the tech used in the Weather App project.
+**Check out the [Kotlin Tutorial](../../kotlin/) first before you tackle this project**
 
 ## Getting a forecast
 
