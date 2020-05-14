@@ -56,6 +56,15 @@ var b = 3
 println("a + b = ${a + b}")
 ```
 
+If the value in the template is from just a variable, we can use a simpler syntax.
+
+```kotlin
+var a = 2
+var b = 3
+var sum = a + b
+println("a + b = $sum")
+```
+
 ## multiply *, divide /, and modulus %
 
 The `*` and `/` opererators represent multiply and divide respectively.
@@ -204,7 +213,7 @@ println(a != 2) // false
 println(a != 3) // true
 ```
 
-### equality with Double and Float
+### Equality with Double and Float
 
 It's highly recommend to not use `==` and `!=` with values of type `Float` and `Double`. Floating-point math tends to be impercise, so it's not uncommon to for an operation to yield a value that is extraordinarily close to the expected value, but is off by 0.000001. There are [techniques to do this](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/), but there a little less intuitive.
 

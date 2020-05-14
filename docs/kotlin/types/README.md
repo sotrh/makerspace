@@ -88,3 +88,14 @@ var at_symbol: Char = '@'
 ### Unit
 
 This is the type for things that have no value. You won't see it on variables at all, but we'll get into it when we talk about [functions](/kotlin/functions/).
+
+## val vs var
+
+We've been creating our variables using `var` up to this point, but there's another keyword we can use: `val`. Creating a variable with `val` removes our ability to change it. This means the following code will not compile.
+
+```kotlin
+val pi = 3.1415
+pi = 3 // Won't compile
+```
+
+Generally it's a good idea to *start* with a `val`, and change it to a `var` if you need the variable to, well, vary. We you know that you *definitely* don't want the value to change, use `val`.

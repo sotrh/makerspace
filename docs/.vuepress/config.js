@@ -10,7 +10,8 @@ module.exports = {
                 path: '/kotlin/',
                 children: [
                     '/kotlin/types/',
-                    '/kotlin/operators/'
+                    '/kotlin/operators/',
+                    '/kotlin/functions/',
                 ],
             },
             { 
