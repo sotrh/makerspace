@@ -12,6 +12,7 @@ module.exports = {
                     '/kotlin/types/',
                     '/kotlin/operators/',
                     '/kotlin/functions/',
+                    '/kotlin/lambdas/',
                 ],
             },
             { 

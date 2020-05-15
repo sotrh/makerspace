@@ -202,6 +202,81 @@ If we want to specify the a parameter after a default parameter, or we have posi
 complicatedFunction(4, dayOfWeek = "FRI")
 ```
 
+## One line functions
+
+If a function ends in the `return` statement, we can leave off the the `return` keyword.
+
+```kotlin
+fun add(a: Int, b: Int): Int {
+    a + b
+}
+```
+
+If the function consists of just the `return` statement we can use the single-expression format.
+
+```kotlin
+fun add(a: Int, b: Int): Int = a + b
+```
+
+We can leave off the return type as well.
+
+```kotlin
+fun add(a: Int, b: Int) = a + b
+```
+
+## Variable parameters, varargs
+
+Somethings you want to execute a function on a variable number of values. You can use the `vararg` keyword for this.
+
+```kotlin
+fun sum(vararg numbers: Int): Int {
+    var sum = 0;
+    for (n in numbers) {
+        sum += n;
+    }
+    return sum
+}
+```
+
+This `sum()` function can take 0 to many numbers, and will compute the sum of all of them.
+
+```kotlin
+sum()
+sum(1)
+sum(1, 2)
+sum(1, 2, 3)
+sum(1, 2, 3, 4)
+// etc...
+```
+
+You can only have **one** `vararg` parameter in any given function. Also if the function has parameters after the `vararg`, you need to specify them with named arguments.
+
+```kotlin
+fun greet(vararg names: String, greeting: String) {
+    // ...
+}
+
+greet("Billy", "Joe", greeting="Hello!")
+```
+
+## The main() function
+
+Our code from [the beginning](/kotlin/) is defined as follows.
+
+```kotlin
+fun main(args: Array<String>) {
+    println(hello())
+}
+```
+
+The program starts by calling this function. All programs must have a `main()` function. The `args` parameter is a list of command line arguments. You don't have to use this parameter. You can even leave it out of the function definition.
+
+```kotlin
+fun main() {
+    prinln(hello())
+}
+```
+
 ## Documentation
 
 If you need more info, check the [documentation](https://kotlinlang.org/docs/reference/functions.html).
