@@ -9,17 +9,26 @@ module.exports = {
                 title: 'Kotlin',
                 path: '/kotlin/',
                 children: [
+                    '/kotlin/',
                     '/kotlin/types/',
                     '/kotlin/operators/',
                     '/kotlin/functions/',
                     '/kotlin/lambdas/',
+                    '/kotlin/classes/',
                 ],
             },
             { 
                 title: 'Android', 
                 path: '/android/', 
                 children: [
-                    '/android/weather/',
+                    {
+                        title: 'Weather App',
+                        path: '/android/weather/',
+                        children: [
+                            '/android/weather/',
+                            '/android/weather/start/',
+                        ]
+                    },
                 ],
             },
             { title: 'Git', path: '/git/' },
