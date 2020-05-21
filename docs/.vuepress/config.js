@@ -27,6 +27,7 @@ module.exports = {
                         children: [
                             '/android/weather/',
                             '/android/weather/start/',
+                            '/android/weather/mvvm/',
                         ]
                     },
                 ],
