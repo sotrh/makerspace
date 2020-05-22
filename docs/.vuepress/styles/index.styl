@@ -1,0 +1,14 @@
+.note {
+    background-color $noteColor
+    border-radius 6px
+    vendor(border-radius, 6px)
+    padding 0.5rem 1.5rem
+}
+
+@media screen and (max-width $MQMobile) {
+    .note {
+        border-radius 0px
+        vendor(border-radius, 0px)
+        margin 0.0rem -1.5rem
+    }
+}

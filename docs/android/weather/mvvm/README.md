@@ -73,7 +73,11 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-The `by` keyword tells kotlin to delegate the creation of `viewModel` to `viewModels()`.
+<div class="note">
+
+The `by` keyword tells kotlin to delegate the creation of `viewModel` to `viewModels()`. Basically `viewModels()` is resposible for providing `viewModel` with all the resources it needs to function properly.
+
+</div>
 
 In order to use `viewModels()`, will need to include it in our project. Open up your `build.gradle (Module: app)`, and in the `dependencies` your going to add a new dependency below all the other dependencies.
 
