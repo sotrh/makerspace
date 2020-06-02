@@ -1,14 +1,27 @@
+excerpt(radius) {
+    border-radius radius
+    -webkit-border-radius radius
+    -moz-border-radius radius
+    padding 0.5rem 1.5rem
+}
+
 .note {
     background-color $noteColor
-    border-radius 6px
-    vendor(border-radius, 6px)
-    padding 0.5rem 1.5rem
+    excerpt(6px)
+}
+
+.warning {
+    background-color $warningColor
+    excerpt(6px)
+
+    .code {
+        // color darken(@color, 10%)
+    }
 }
 
 @media screen and (max-width $MQMobile) {
     .note {
-        border-radius 0px
-        vendor(border-radius, 0px)
+        excerpt(0px)
         margin 0.0rem -1.5rem
     }
 }
