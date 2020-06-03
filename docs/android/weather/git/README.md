@@ -39,3 +39,5 @@ Your files should now be normal colored.
 ![](./committed.png)
 
 If you create a new file, Android Studio should prompt ask you if you want it to be added to the git repo. You should usually say yes, unless you have an actual reason to say no. As always you can add/remove files from Git from the command line.
+
+If you make changes to a file, it's name will turn blue again. This means that it's been modified. You simply need to `git add` it to make it green. Then once you've made all the changes you want to the project, you `git commit` and everything will be normal colored again.
