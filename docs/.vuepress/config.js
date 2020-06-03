@@ -29,6 +29,7 @@ module.exports = {
                             '/android/weather/start/',
                             '/android/weather/mvvm/',
                             '/android/weather/location/',
+                            '/android/weather/git/',
                         ]
                     },
                 ],
