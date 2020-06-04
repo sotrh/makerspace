@@ -30,6 +30,7 @@ module.exports = {
                             '/android/weather/mvvm/',
                             '/android/weather/location/',
                             '/android/weather/git/',
+                            '/android/weather/forecast/',
                         ]
                     },
                 ],
