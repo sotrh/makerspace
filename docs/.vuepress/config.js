@@ -31,6 +31,7 @@ module.exports = {
                             '/android/weather/location/',
                             '/android/weather/git/',
                             '/android/weather/forecast/',
+                            '/android/weather/more-views/',
                         ]
                     },
                 ],
