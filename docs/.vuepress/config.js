@@ -5,6 +5,15 @@ module.exports = {
     themeConfig: {
         sidebar: [
             { title: 'Home', path: '/' },
+            { 
+                title: 'Programming 101', 
+                path: '/programming-101/',
+                children: [
+                    '/programming-101/',
+                    '/programming-101/vocab.md',
+                    { title: 'Git', path: '/programming-101/git/' },
+                ]
+            },
             {
                 title: 'Kotlin',
                 path: '/kotlin/',
@@ -36,7 +45,6 @@ module.exports = {
                     },
                 ],
             },
-            { title: 'Git', path: '/git/' },
         ]
     }
 };
