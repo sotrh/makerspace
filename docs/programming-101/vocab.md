@@ -446,7 +446,7 @@ console.log(person.name);
 
 A class is code that defines a blueprint for a type of object.
 
-```java
+```javascript
 class Person {
     constructor(name, age) {
         this.name = name;
@@ -466,3 +466,63 @@ We can create a person by calling it's constructor.
 ```javascript
 let person = Person("Fred", 20);
 ```
+
+### Methods
+
+These are functions attached to a particular class. 
+
+```javascript
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    sayHello(person) {
+        console.log("Hello, " + person.name + "!"); // Use the other person's `name`
+        console.log("My name is " + this.name "."); // Use `name` from the object calling this method.
+        console.log("Nice to meet you!");
+    }
+}
+
+let mike = Person("Mike", 44);
+let tammy = Person("Tammy", 38);
+
+mike.greet(tammy);
+
+// Output:
+// Hello, Tammy!
+// My name is Mike.
+// Nice to meet you!
+```
+
+## Object-Oriented Programming (OOP)
+
+There are whole college courses on this topic. Basically it boils down to thinking of the parts of your program as objects. If you make a `Greeter` class, it will probaly have a `greet()` method.
+
+OOP also introduced the concept of inheritance which would allow classes to inherit code from parent classes. This feature as been praised and condemned from various members of the community. Many modern languages still use OOP principles hower.
+
+## Global
+
+A [variable](#variable) or [function](#function) is considered `global` if it's available to the entire program. Different languages handle defining global variables in different ways. Some languages don't allow globals at all. This is because global variables can make your program more difficult to understand (particularly from when someone else is using your code).
+
+<div class="note">
+
+This example is contrived, but it illustrates the point.
+
+</div>
+
+```javascript
+let hasRunOnce = false;
+
+function setupManyThings() {
+    if (!hasRunOnce) {
+        // Do the setup...
+    }
+    
+    hasRunOnce = true;
+    console.log("Setup completed");
+}
+```
+
+When a user calls `setupManyThings()` the first time, it behaves as expected. If the user needs to run the function again (say to refresh the data), it will simply exit with `Setup completed`. The user can't know that `setupManyThings()` will only run once without looking its definition in the code. If another function uses `hasRunOnce`, it's behavior will change without the function being called at all.
