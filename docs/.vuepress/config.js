@@ -11,6 +11,7 @@ module.exports = {
                 children: [
                     '/programming-101/',
                     '/programming-101/vocab.md',
+                    '/programming-101/web-recipes/',
                     { title: 'Git', path: '/programming-101/git/' },
                 ]
             },

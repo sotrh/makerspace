@@ -173,7 +173,7 @@ A nicer version of `git reset --hard HEAD`, `git revert` will create a new commi
 
 The `.gitignore` file is a file that you can use to tell git what files and directories it should ignore. Here's an example `.gitignore` below.
 
-```.gitignore
+```
 # Build files
 /node_modules/
 
