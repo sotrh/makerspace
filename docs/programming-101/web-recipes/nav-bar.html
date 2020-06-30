@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+</head>
+<body>
+    <style>
+        ul#navbar, #navbar ul {
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul#navbar li {
+            text-decoration: none;
+            float: left;
+            padding: 16px 16px;
+            color: #eee;
+            background-color: #333;
+        }
+
+        ul#navbar li:hover {
+            background-color: #444;
+        }
+
+        ul#navbar li.dropdown {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        ul#navbar li.dropdown ul.dropdown-content {
+            display: none;
+        }
+
+        ul#navbar li.dropdown:hover .dropdown-content {
+            display: block;
+            text-align: left;
+        }
+
+        ul#navbar li.dropdown:hover ul.dropdown-content li {
+            float: none;
+            text-align: left;
+        }
+    </style>
+    <ul id="navbar">
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="news.html">News</a>
+        </li>
+        <li class="dropdown">
+            Dropdown
+            <ul class="dropdown-content">
+                <li>
+                    <a href="link1.html">Link 1</a>
+                </li>
+                <li>
+                    <a href="link2.html">Link 2</a>
+                </li>
+                <li>
+                    <a href="link3.html">Link 3</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

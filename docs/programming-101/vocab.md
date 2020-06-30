@@ -525,4 +525,4 @@ function setupManyThings() {
 }
 ```
 
-When a user calls `setupManyThings()` the first time, it behaves as expected. If the user needs to run the function again (say to refresh the data), it will simply exit with `Setup completed`. The user can't know that `setupManyThings()` will only run once without looking its definition in the code. If another function uses `hasRunOnce`, it's behavior will change without the function being called at all.
+When a user calls `setupManyThings()` the first time, it behaves as expected. If the user needs to run the function again (say to refresh the data), it will simply exit with `Setup completed`. The user can't know that `setupManyThings()` will only run once without looking  at its definition in the code. If another function uses `hasRunOnce`, it's behavior will change without the function being called at all.

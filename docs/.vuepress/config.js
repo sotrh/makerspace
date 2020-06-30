@@ -16,6 +16,13 @@ module.exports = {
                 ]
             },
             {
+                title: 'Game Dev Resources',
+                path: '/game-dev-resources/',
+                children: [
+                    '/game-dev-resources/',
+                ]
+            },
+            {
                 title: 'Kotlin',
                 path: '/kotlin/',
                 children: [
