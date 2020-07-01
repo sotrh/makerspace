@@ -1,6 +1,6 @@
 # Web Recipes
 
-## Drop-Down Navbar
+## Dropdown Navbar
 
 Found at [https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp](https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp)
 
@@ -109,3 +109,146 @@ Found at [https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp](https:/
 </html>
 ```
 
+
+## Multi Level Dropdown Navbar
+
+`index.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Level Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="menu"><a href="#">Single</a>
+                <ul class="submenu">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href="#">Double</a>
+                <ul class="submenu">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Sub Menu 1</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub 1</a></li>
+                            <li><a href="#">Sub 2</a></li>
+                            <li><a href="#">Sub 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sub Menu 2</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub 4</a></li>
+                            <li><a href="#">Sub 5</a></li>
+                            <li><a href="#">Sub 6</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu"><a href="#">Triple</a>
+                <ul class="submenu">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Sub Menu 1</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub 1</a></li>
+                            <li><a href="#">Sub 2</a></li>
+                            <li><a href="#">Sub 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sub Menu 2</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sub Sub Menu 1</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Sub Sub 1</a></li>
+                                    <li><a href="#">Sub Sub 2</a></li>
+                                    <li><a href="#">Sub Sub 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sub Sub Menu 2</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Sub Sub 4</a></li>
+                                    <li><a href="#">Sub Sub 5</a></li>
+                                    <li><a href="#">Sub Sub 6</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sub 4</a></li>
+                            <li><a href="#">Sub 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+```
+
+`style.css`
+```css
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eee
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 0.4rem;
+    position: relative;
+    white-space: nowrap;
+}
+
+nav ul li:hover {
+    background-color: #3bb;
+}
+
+nav .menu .submenu {
+    position: absolute;
+    background: #333;
+    display: none;
+}
+
+nav .menu:hover .submenu {
+    display: block;
+}
+
+nav .menu .submenu li .submenu {
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    display: none;
+}
+
+nav .menu .submenu li:hover > .submenu {
+    display: block;
+}
+```
